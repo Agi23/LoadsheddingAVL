@@ -1,0 +1,6 @@
+BSTTest 6: input has too few values
+Input = java LSBSTApp '1' '2' 
+------------------
+OUTPUT:
+
+Error: incorrect format

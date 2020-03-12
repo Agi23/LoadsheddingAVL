@@ -1,0 +1,7 @@
+ArrayTest 3: invalid search input
+Input = java LSArrayApp '8' '44' '00'
+------------------
+OUTPUT:
+
+No item found
+No of operations: 2976

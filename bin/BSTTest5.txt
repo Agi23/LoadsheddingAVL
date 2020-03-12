@@ -1,0 +1,6 @@
+BSTTest 5: input has too many values
+Input = java LSBSTApp 'A' 'B' 'C' 
+------------------
+OUTPUT:
+
+Error: input must be integer numbers

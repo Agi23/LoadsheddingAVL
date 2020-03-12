@@ -1,0 +1,7 @@
+BSTTest 3: invalid search input
+Input = java LSBSTApp '8' '44' '00'
+------------------
+OUTPUT:
+
+Item not found
+No of operations: 188

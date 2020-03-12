@@ -1,0 +1,12 @@
+ArrayTest 2: valid search input
+Input = java LSArrayApp '1' '12' '00'
+------------------
+OUTPUT:
+
+Stage: 1
+Day: 12
+Starting time: 00h00
+Areas: 7
+
+Data point has been found
+No of operations: 23

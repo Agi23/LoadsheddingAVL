@@ -1,0 +1,6 @@
+ArrayTest 6: input has too few values
+Input = java LSArrayApp '1' '2' 
+------------------
+OUTPUT:
+
+Error: incorrect format
