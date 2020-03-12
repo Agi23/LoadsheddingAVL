@@ -11,13 +11,17 @@ class LSManager {
 
     /**stores array of data inputted */
     public static LSArray testArray;
+
+    public static AVLTree testAVL;
     /** 
     * facilitates running both data structures by taking in the name of a textfile as the user input and outputting to a textfile the search count data
      */
     public static void main(String[] args) {
         testCounter = new Counter();
-        
         testTree = new BinaryTree(args[0]);
+        //testAVL = new AVLTree(args[0]);
+
+
         testCounter.setArrayInsert(testTree.getCounterInsert());
         String insertCounterBST = testCounter.toStringInsert();
 

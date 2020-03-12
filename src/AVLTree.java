@@ -4,7 +4,16 @@
 // reference: kukuruku.co/post/avl-trees/
 
 public class AVLTree extends BinaryTree
-{
+{  
+
+   public AVLTree(String txtfile){
+      super(txtfile);
+   }
+
+   public AVLTree(){
+      super();
+   }
+
    public int height (BinaryTreeNode node )
    {
       if (node != null)
@@ -66,6 +75,7 @@ public class AVLTree extends BinaryTree
    }
    public BinaryTreeNode insert (LSInfoItem d, BinaryTreeNode node )
    {
+      opCounterInsert++;
       if (node == null)
          return new BinaryTreeNode (d, null, null);
       if (d.compareTo (node.data) <= 0)
@@ -117,14 +127,14 @@ public class AVLTree extends BinaryTree
    }
 
    public BinaryTreeNode find ( LSInfoItem d )
-   {
+   {  opCounterFind++;
       if (root == null)
          return null;
       else
          return find (d, root);
    }
    public BinaryTreeNode find ( LSInfoItem d, BinaryTreeNode node )
-   {
+   {  
       if (d.compareTo (node.data) == 0) 
          return node;
       else if (d.compareTo (node.data) < 0)
