@@ -4,6 +4,8 @@ class Counter{
     int BSTFind;
     int BSTInsert;
     int iternum;
+    int AVLInsert;
+    int AVLFind;
 
 
     
@@ -14,6 +16,7 @@ class Counter{
         this.ArrayFind = 0;
         this.BSTFind = 0;
         this.iternum = itnum;
+        this.AVLFind =0;
     }
     
     /** 
@@ -22,6 +25,7 @@ class Counter{
     public Counter(){
         BSTInsert =0;
         ArrayInsert=0;
+        AVLInsert =0;
     }
     
     /** 
@@ -30,7 +34,9 @@ class Counter{
     public void setArrayFind(int count){
         ArrayFind = count;
     }
-
+    public void setAVLFind(int count){
+        AVLFind = count;
+    }
     
     /** 
      * setsvBSTFind
@@ -38,7 +44,6 @@ class Counter{
     public void setBSTFind(int count){
         BSTFind = count;
     }
-
     
     /** 
      * sets ArrayInsert 
@@ -46,7 +51,9 @@ class Counter{
     public void setArrayInsert(int count){
         ArrayInsert = count;
     }
-
+    public void setAVLInsert(int count){
+        AVLInsert = count;
+    }
     
     /** 
      * sets BSTInsert 
@@ -59,22 +66,27 @@ class Counter{
     /** 
      * resets all variables =0
      */
-    private void reset(){
+    private void resetFind(){
         ArrayFind = 0;
         BSTFind = 0;
+        AVLFind = 0;
         iternum =0;
-        ArrayInsert =0;
-        BSTInsert = 0;
+        //ArrayInsert =0;
+        //BSTInsert = 0;
 
     }
-
+    private void resetInsert(){
+        ArrayInsert =0;
+        BSTInsert = 0;
+        AVLInsert = 0;
+    }
     
     /** 
      * outputs the Find counters in string format
      */
     public String toStringFind(){
-        String out = Integer.toString(iternum) + "," + Integer.toString(ArrayFind) + "," + Integer.toString(BSTFind) ;
-        reset();
+        String out = Integer.toString(iternum) + "," + Integer.toString(ArrayFind) + "," + Integer.toString(BSTFind) + ',' +Integer.toString(AVLFind);
+        resetFind();
         return out;
 
     }
@@ -85,8 +97,8 @@ class Counter{
      */
     public String toStringInsert(){
         
-        String out ="Array insert counter: " + Integer.toString(ArrayInsert) + "BST Insert counter: " + Integer.toString(BSTInsert);
-        reset();
+        String out ="Array insert counter: " + Integer.toString(ArrayInsert) + System.lineSeparator() + "BST Insert counter: " + Integer.toString(BSTInsert) + System.lineSeparator()+ "AVL Insert counter: " + Integer.toString(AVLInsert);
+        resetInsert();
         return out;
     }
 }

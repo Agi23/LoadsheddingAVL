@@ -18,16 +18,32 @@ class LSManager {
      */
     public static void main(String[] args) {
         testCounter = new Counter();
+
         testTree = new BinaryTree(args[0]);
-        //testAVL = new AVLTree(args[0]);
-
-
-        testCounter.setArrayInsert(testTree.getCounterInsert());
-        String insertCounterBST = testCounter.toStringInsert();
-
+        testAVL = new AVLTree(args[0]);
         testArray = new LSArray(args[0]);
+
+        testCounter.setBSTInsert(testTree.getCounterInsert());
+        testCounter.setAVLInsert(testAVL.getCounterInsert());
         testCounter.setArrayInsert(testArray.getCounterInsert());
-        String insertCounterArray = testCounter.toStringInsert();
+
+        System.out.println(testCounter.toStringInsert());
+
+        //String usrTime = "4_29_06";
+        //String time[] = usrTime.split("_");
+
+        testTree.PrintAreas(time[0], time[1], time[2]);
+        testCounter.setBSTFind(testTree.getCounterFind());
+
+        testAVL.PrintAreas(time[0], time[1], time[2]);
+        testCounter.setAVLFind(testAVL.getCounterFind());
+
+        testArray.PrintAreas(time[0], time[1], time[2]);
+        testCounter.setArrayFind(testArray.getCounterFind());
+
+        System.out.println(testCounter.toStringFind());
+        
+        //String insertCounterAVL = testCounter.toStringInsert();
 
         String fileName = args[0] + "output.txt";
 
@@ -39,8 +55,9 @@ class LSManager {
         //testTree.PrintAllAreas();
 
         LSInfoItem arrData[] = testArray.getArray();
-        System.out.println("LENGTH");
-        System.out.println(arrData.length);
+        //System.out.println("LENGTH");
+        //System.out.println(arrData.length);
+
         for (LSInfoItem k : arrData){
             iternum++;
             testCounter = new Counter(iternum);
@@ -79,4 +96,5 @@ class LSManager {
 
         
     }
+    
 }
