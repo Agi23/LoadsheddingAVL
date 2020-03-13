@@ -32,14 +32,6 @@ class LSManager {
         //String usrTime = "4_29_06";
         //String time[] = usrTime.split("_");
 
-        testTree.PrintAreas(time[0], time[1], time[2]);
-        testCounter.setBSTFind(testTree.getCounterFind());
-
-        testAVL.PrintAreas(time[0], time[1], time[2]);
-        testCounter.setAVLFind(testAVL.getCounterFind());
-
-        testArray.PrintAreas(time[0], time[1], time[2]);
-        testCounter.setArrayFind(testArray.getCounterFind());
 
         System.out.println(testCounter.toStringFind());
         
@@ -66,12 +58,16 @@ class LSManager {
 
             
 
+            testTree.PrintAreas(time[0], time[1], time[2]);
+            testCounter.setBSTFind(testTree.getCounterFind());
+
+            testAVL.PrintAreas(time[0], time[1], time[2]);
+            testCounter.setAVLFind(testAVL.getCounterFind());
 
             testArray.PrintAreas(time[0], time[1], time[2]);
             testCounter.setArrayFind(testArray.getCounterFind());
 
-            testTree.PrintAreas(time[0], time[1], time[2]);
-            testCounter.setBSTFind(testTree.getCounterFind());
+          
 
             try {
                 FileWriter writer = new FileWriter(fileName, true);

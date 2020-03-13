@@ -127,14 +127,14 @@ public class AVLTree extends BinaryTree
    }
 
    public BinaryTreeNode find ( LSInfoItem d )
-   {  opCounterFind++;
+   {  
       if (root == null)
          return null;
       else
          return find (d, root);
    }
    public BinaryTreeNode find ( LSInfoItem d, BinaryTreeNode node )
-   {  
+   {  opCounterFind++;
       if (d.compareTo (node.data) == 0) 
          return node;
       else if (d.compareTo (node.data) < 0)
