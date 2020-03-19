@@ -43,9 +43,12 @@ for txtfile in csvFiles:
 #print(BSTdata)
 #print(AVLdata)
 
-df = pd.DataFrame(numpy.array(BSTdata) ,index = n,columns =["best", "worst", "avg"])
-print(df)
-df.to_excel("output.xlsx")  
+dfBST = pd.DataFrame(numpy.array(BSTdata) ,index = n,columns =["best", "worst", "avg"])
+dfAVL = pd.DataFrame(numpy.array(AVLdata) ,index = n,columns =["best", "worst", "avg"])
+print(dfBST)
+print("")
+print(dfAVL)
+#df.to_excel("output.xlsx")  
 #ig, ax = plt.subplots()
 #df.plot(x=n, y='worst', ax=ax, legend=False)
 

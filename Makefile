@@ -27,7 +27,8 @@ ClASSES:LSInfoItem.class \
 	Counter.class\
 	LSManager.class \
 	AVLTree.class \
-	LSAVLApp.class
+	LSAVLApp.class \
+	genStage8.class
 
 
 clean:
