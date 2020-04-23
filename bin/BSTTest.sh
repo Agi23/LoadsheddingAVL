@@ -1,99 +1,111 @@
 #!/bin/bash
 
-exec 3<> BSTTest1.txt
+#No parameter test
+exec 3<> BSTTestNoParam.txt
 
-    # Let's print some text to fd 3
-    echo "BSTTest 1: Prints all data" >&3
+    
+    echo "BSTTest No parameters: Prints all data" >&3
     echo "Input = java LSBSTApp" >&3
     echo "------------------" >&3
     echo "OUTPUT:" >&3
     echo "" >&3
 
-# Close fd 3
+
 exec 3>&-
 
-java LSBSTApp >> BSTTest1.txt
+java LSBSTApp >> BSTTestNoParam.txt
 
 
+#Valid Test 1
+exec 3<> BSTValid1.txt
 
-exec 3<> BSTTest2.txt
-
-    # Let's print some text to fd 3
-    echo "BSTTest 2: valid search input" >&3
+   
+    echo "BST Valid Test 1: " >&3
     echo "Input = java LSBSTApp '1' '12' '00'" >&3
     echo "------------------" >&3
     echo "OUTPUT:" >&3
     echo "" >&3
 
-# Close fd 3
 exec 3>&-
 
-java LSBSTApp "1" "12" "00" >> BSTTest2.txt
 
+java LSBSTApp "1" "12" "00" >> BSTValid1.txt
 
+#Valid Test 2
+exec 3<> BSTValid2.txt
 
-
-exec 3<> BSTTest3.txt
-
-    # Let's print some text to fd 3
-    echo "BSTTest 3: invalid search input" >&3
-    echo "Input = java LSBSTApp '8' '44' '00'" >&3
+   
+    echo "BST Valid Test 2: " >&3
+    echo "Input = java LSBSTApp '4' '15' '10'" >&3
     echo "------------------" >&3
     echo "OUTPUT:" >&3
     echo "" >&3
 
-# Close fd 3
+
 exec 3>&-
 
-java LSBSTApp "8" "44" "00" >> BSTTest3.txt
+java LSBSTApp "4" "15" "10" >> BSTValid2.txt
+
+#Valid Test 3
+exec 3<> BSTValid3.txt
+
+   
+    echo "BST Valid Test 3: " >&3
+    echo "Input = java LSBSTApp '8' '21' '14'" >&3
+    echo "------------------" >&3
+    echo "OUTPUT:" >&3
+    echo "" >&3
 
 
+exec 3>&-
 
-exec 3<> BSTTest4.txt
+java LSBSTApp "8" "21" "14" >> BSTValid3.txt
 
-    # Let's print some text to fd 3
-    echo "BSTTest 4: input has too many values" >&3
+
+#Invalid Tests
+
+#Invalid test 1
+exec 3<> BSTInvalid1.txt
+
+    echo "BST Invalid Test 1: invalid search input" >&3
+    echo "Input = java LSBSTApp '8' '44' '00'" >&3
+    echo "------------------" >&3
+    echo "OUTPUT:" >&3
+    echo "" >&3
+exec 3>&-
+
+java LSBSTApp "8" "44" "00" >> BSTInvalid1.txt
+
+
+#Invalid Test 2
+exec 3<> BSTInvalid2.txt
+
+    echo "BST Invalid Test 2: input has too many values" >&3
     echo "Input = java LSBSTApp '8' '44' '00' '22' '33' " >&3
     echo "------------------" >&3
     echo "OUTPUT:" >&3
     echo "" >&3
 
-# Close fd 3
+
 exec 3>&-
 
-java LSBSTApp "8" "44" "00" "22" "33" >> BSTTest4.txt
+java LSBSTApp "8" "44" "00" "22" "33" >> BSTInvalid2.txt
 
 
+#Invalid Test 3
+exec 3<> BSTInvalid3.txt
 
-exec 3<> BSTTest5.txt
-
-    # Let's print some text to fd 3
-    echo "BSTTest 5: input has too many values" >&3
+    
+    echo "BST Invalid Test 3: input is wrong data type" >&3
     echo "Input = java LSBSTApp 'A' 'B' 'C' " >&3
     echo "------------------" >&3
     echo "OUTPUT:" >&3
     echo "" >&3
 
-# Close fd 3
+
 exec 3>&-
 
-java LSBSTApp "A" "B" "C" >> BSTTest5.txt
-
-
-
-exec 3<> BSTTest6.txt
-
-    # Let's print some text to fd 3
-    echo "BSTTest 6: input has too few values" >&3
-    echo "Input = java LSBSTApp '1' '2' " >&3
-    echo "------------------" >&3
-    echo "OUTPUT:" >&3
-    echo "" >&3
-
-# Close fd 3
-exec 3>&-
-
-java LSBSTApp "1" "2" >> BSTTest6.txt
+java LSBSTApp "A" "B" "C" >> BSTInvalid3.txt
 
 
 

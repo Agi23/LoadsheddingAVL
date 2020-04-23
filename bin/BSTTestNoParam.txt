@@ -1,4 +1,4 @@
-BSTTest 1: Prints all data
+BSTTest No parameters: Prints all data
 Input = java LSBSTApp
 ------------------
 OUTPUT:

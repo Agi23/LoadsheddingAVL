@@ -16,7 +16,7 @@ class LSBSTApp{
         myTree = new BinaryTree();
         if (args.length == 0){
             System.out.println("No of  operations for insert: " + myTree.getCounterInsert());
-            /** 
+            
             System.out.println ("Height : " + myTree.getHeight ());
             System.out.println ("Size : " + myTree.getSize ());
             System.out.println ("Inorder : ");
@@ -26,9 +26,9 @@ class LSBSTApp{
             System.out.println ("Postorder : ");
             myTree.postOrder ();
             System.out.println ("Level order : ");
-            myTree.levelOrder ();}*/
+            myTree.levelOrder ();}
 
-        }
+        
         else{
         //check if correct format
         if (args.length == 3){

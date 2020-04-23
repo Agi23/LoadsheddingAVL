@@ -1,0 +1,12 @@
+BST Valid Test 3: 
+Input = java LSBSTApp '8' '21' '14'
+------------------
+OUTPUT:
+
+Data item was found
+Stage: 8
+Day: 21
+Starting time: 14h00
+Areas: 9,1,5,13,10,2,6,14
+
+No of operations: 185

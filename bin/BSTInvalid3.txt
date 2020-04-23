@@ -1,4 +1,4 @@
-BSTTest 5: input has too many values
+BST Invalid Test 3: input is wrong data type
 Input = java LSBSTApp 'A' 'B' 'C' 
 ------------------
 OUTPUT:
