@@ -3,19 +3,19 @@ public class LSAVLApp{
         AVLTree myAVL = new AVLTree();
         if (args.length == 0){
             System.out.println("No of  operations for insert: " + myAVL.getCounterInsert());
-            /** 
-            System.out.println ("Height : " + myTree.getHeight ());
-            System.out.println ("Size : " + myTree.getSize ());
+            
+            System.out.println ("Height : " + myAVL.getHeight ());
+            System.out.println ("Size : " + myAVL.getSize ());
             System.out.println ("Inorder : ");
-            myTree.inOrder ();
+            myAVL.inOrder ();
             System.out.println ("Preorder : ");
-            myTree.preOrder ();
+            myAVL.preOrder ();
             System.out.println ("Postorder : ");
-            myTree.postOrder ();
+            myAVL.postOrder ();
             System.out.println ("Level order : ");
-            myTree.levelOrder ();}*/
+            myAVL.levelOrder ();}
 
-        }
+        
         else{
         //check if correct format
         if (args.length == 3){
@@ -34,8 +34,6 @@ public class LSAVLApp{
         else{
             System.out.println("Error: incorrect format");}
     } 
-        myAVL.PrintAreas("1", "23", "00");
-        System.out.println(myAVL.getCounterInsert());
-        System.out.println(myAVL.getCounterFind());
+        
     }
 }

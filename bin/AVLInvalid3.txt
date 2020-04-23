@@ -1,0 +1,6 @@
+AVL Invalid Test 3: input is wrong data type
+Input = java LSAVLApp 'A' 'B' 'C' 
+------------------
+OUTPUT:
+
+Error: input must be integer numbers

@@ -1,6 +1,0 @@
-ArrayTest 4: input has too many values
-Input = java LSArrayApp '8' '44' '00' '22' '33' 
-------------------
-OUTPUT:
-
-Error: incorrect format

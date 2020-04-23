@@ -1,0 +1,19 @@
+AVL Invalid Test 1: invalid search input
+Input = java LSAVLApp '8' '44' '00'
+------------------
+OUTPUT:
+
+Item not found
+No of operations: 12
+AVL Invalid Test 2: input has too many values
+Input = java LSAVLApp '8' '44' '00' '22' '33' 
+------------------
+OUTPUT:
+
+Error: incorrect format
+AVL Invalid Test 3: input is wrong data type
+Input = java LSAVLApp 'A' 'B' 'C' 
+------------------
+OUTPUT:
+
+Error: input must be integer numbers

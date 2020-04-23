@@ -1,0 +1,6 @@
+AVL Invalid Test 2: input has too many values
+Input = java LSAVLApp '8' '44' '00' '22' '33' 
+------------------
+OUTPUT:
+
+Error: incorrect format
