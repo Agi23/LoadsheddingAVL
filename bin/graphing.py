@@ -36,19 +36,21 @@ for txtfile in csvFiles:
     BSTdata.append([bestBST, worstBST, avgBST])
     AVLdata.append([bestAVL, worstAVL, avgAVL])
 
-    #plt.plot(iter,bst)
-    #plt.plot(iter, avl)
+    plt.plot(iter,bst)
+    plt.plot(iter, avl)
 
-#plt.show()
+plt.show()
 #print(BSTdata)
 #print(AVLdata)
 
-dfBST = pd.DataFrame(numpy.array(BSTdata) ,index = n,columns =["best", "worst", "avg"])
-dfAVL = pd.DataFrame(numpy.array(AVLdata) ,index = n,columns =["best", "worst", "avg"])
-print(dfBST)
-print("")
-print(dfAVL)
-#df.to_excel("output.xlsx")  
+#dfBST = pd.DataFrame(numpy.array(BSTdata) ,index = n,columns =["best", "worst", "avg"])
+#dfAVL = pd.DataFrame(numpy.array(AVLdata) ,index = n,columns =["best", "worst", "avg"])
+#print(dfBST)
+#print("")
+#print(dfAVL)
+
+#dfBST.to_excel("outputBST.xlsx")  
+#dfAVL.to_excel("outputAVL.xlsx")
 #ig, ax = plt.subplots()
 #df.plot(x=n, y='worst', ax=ax, legend=False)
 

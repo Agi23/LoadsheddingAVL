@@ -7,6 +7,7 @@ public class LSInfoItem implements Comparable<LSInfoItem>{
     
     /** 
      * Takes on String LSLine (from textfile) and formats it into a LSInfoItem object
+     * @param LSLine info line in its origina textfile format
      */
     public LSInfoItem(String LSLine){
         this.LSRawString = LSLine;
@@ -55,6 +56,8 @@ public class LSInfoItem implements Comparable<LSInfoItem>{
     
     /** 
      * takes in LSInfoItem as a parameter and compares it with the current LSInfoItem
+     * @param item LSInfoItem object that needs comparison
+     * @return integer compareTo
      */
     public int compareTo(LSInfoItem item){
         String itemTime = item.LSTime;
@@ -63,7 +66,8 @@ public class LSInfoItem implements Comparable<LSInfoItem>{
 
     
     /** 
-     * returns LSInfoItem LSTime and LSArea in a readable string format
+     * Returns data stored in the object as string
+     * @return LSInfoItem LSTime and LSArea in a readable string format
      */
     public String toString(){
         return formatLSTime() + System.lineSeparator() + "Areas: " +LSAreas + System.lineSeparator();

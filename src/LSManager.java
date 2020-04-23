@@ -3,7 +3,8 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 class LSManager {
-    /**stores Counter object for BST operations and Array operations */
+    /**stores Counter object for BST operations and Array operations 
+    */
     public static Counter testCounter;
     
     /**stores Binary Tree of data inputted */
