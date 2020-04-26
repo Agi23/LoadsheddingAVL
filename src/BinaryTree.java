@@ -133,6 +133,7 @@ public class BinaryTree
 
 
    }
+
    
    /** 
     * inserts LSInfoItem into the BST
