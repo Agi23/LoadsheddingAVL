@@ -9,7 +9,7 @@ public class LSUser {
         DateTimeFormatter dt = DateTimeFormatter.ofPattern("dd");
         LocalDateTime cur = LocalDateTime.now();
         String usrDay = dt.format(cur);
-        System.out.println(usrDay);
+        //System.out.println(usrDay);
 
         //get user data
         int Stage = 4;

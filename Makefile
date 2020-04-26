@@ -29,7 +29,8 @@ ClASSES:LSInfoItem.class \
 	AVLTree.class \
 	LSAVLApp.class \
 	genStage8.class \
-	LSUser.class
+	LSUser.class \
+	GUI.class
 
 
 clean:
