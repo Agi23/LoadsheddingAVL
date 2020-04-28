@@ -28,13 +28,21 @@ class LSManager {
         testCounter.setAVLInsert(testAVL.getCounterInsert());
         testCounter.setArrayInsert(testArray.getCounterInsert());
 
-        System.out.println(testCounter.toStringInsert());
+        try {
+            FileWriter writerInsert = new FileWriter("insert.txt", true);
+            BufferedWriter bufferedWriterInsert = new BufferedWriter(writerInsert);
+            bufferedWriterInsert.write(testCounter.toStringInsert());
+                    //System.out.println(testCounter.toStringFind());
+            bufferedWriterInsert.newLine();
+            bufferedWriterInsert.close();
+        } catch (IOException e) {
+            e.printStackTrace();}
 
         //String usrTime = "4_29_06";
         //String time[] = usrTime.split("_");
 
 
-        System.out.println(testCounter.toStringFind());
+        //System.out.println(testCounter.toStringFind());
         
         //String insertCounterAVL = testCounter.toStringInsert();
 
@@ -50,7 +58,7 @@ class LSManager {
         LSInfoItem arrData[] = testArray.getArray();
         //System.out.println("LENGTH");
         //System.out.println(arrData.length);
-
+        //System.out.println()
         for (LSInfoItem k : arrData){
             iternum++;
             testCounter = new Counter(iternum);
@@ -68,7 +76,8 @@ class LSManager {
             testArray.PrintAreas(time[0], time[1], time[2]);
             testCounter.setArrayFind(testArray.getCounterFind());
 
-          
+            //System.out.println(testCounter.toStringInsert());
+            
 
             try {
                 FileWriter writer = new FileWriter(fileName, true);

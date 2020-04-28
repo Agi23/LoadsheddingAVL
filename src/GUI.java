@@ -21,7 +21,7 @@ public class GUI extends JPanel implements ActionListener {
     private JLabel lblArea;
     private JLabel lblToday;
     private JLabel lblTom;
-    private JButton lblClear;
+    private JButton btnClear;
 
     public GUI() {
         //construct preComponents
@@ -38,7 +38,7 @@ public class GUI extends JPanel implements ActionListener {
         lblArea = new JLabel ("AREA:");
         lblToday = new JLabel ("TODAY:");
         lblTom = new JLabel ("TOMORROW:");
-        lblClear = new JButton ("CLEAR");
+        btnClear = new JButton ("CLEAR");
 
         //adjust size and set layout
         setPreferredSize (new Dimension (343, 471));
@@ -54,10 +54,11 @@ public class GUI extends JPanel implements ActionListener {
         add (lblArea);
         add (lblToday);
         add (lblTom);
-        add (lblClear);
+        add (btnClear);
 
         //action listener
-        btnGo.addActionListener(this);  
+        btnGo.addActionListener(this); 
+        btnClear.addActionListener(this);
 
         //set component bounds (only needed by Absolute Positioning)
         btnGo.setBounds (120, 125, 100, 30);
@@ -69,7 +70,7 @@ public class GUI extends JPanel implements ActionListener {
         lblArea.setBounds (20, 90, 100, 25);
         lblToday.setBounds (55, 220, 100, 25);
         lblTom.setBounds (200, 220, 100, 25);
-        lblClear.setBounds (120, 160, 100, 30);
+        btnClear.setBounds (120, 160, 100, 30);
     }
 
 
@@ -83,8 +84,12 @@ public class GUI extends JPanel implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e){  
-        todayText.setText("hi");  
-
+        //todayText.setText("hi");  
+        if (e.getSource() == btnClear){
+            todayText.setText("");
+            tomText.setText("");
+        }
+        else{
         String selectedStage = (String) compStage.getSelectedItem();
         String selectedArea = (String) compArea.getSelectedItem();
 
@@ -93,17 +98,27 @@ public class GUI extends JPanel implements ActionListener {
         DateTimeFormatter dt = DateTimeFormatter.ofPattern("dd");
         LocalDateTime cur = LocalDateTime.now();
         String usrDay = dt.format(cur);
+        cur = cur.plusDays(1);
+        String usrTom =  dt.format(cur);
+        
+        //System.out.println(usrTom);
         String info;
-
+        String infoTom;
         String[] timeArr = {"00","02","04","06","08","10","12","14","16","18","20","22"};
         for (String t : timeArr){
             //System.out.println(t);
             info = "";
+            infoTom = "";
+            infoTom = selectedStage + "_" + usrTom + "_" + t;
             info = selectedStage + "_" + usrDay + "_" + t;
             //System.out.println(info);
 
             LSInfoItem curItem = new LSInfoItem(info);
+            LSInfoItem tomItem = new LSInfoItem(infoTom);
+
             BinaryTreeNode ans = myData.find(curItem);
+            BinaryTreeNode ansTom = myData.find(tomItem);
+
             if (ans != null){
                 String myAreas = ans.data.getLSAreas();
                 //System.out.println(myAreas);
@@ -117,10 +132,21 @@ public class GUI extends JPanel implements ActionListener {
 
             }
 
+            if (ansTom != null){
+                String myAreasTom = ansTom.data.getLSAreas();
+                //System.out.println(myAreas);
+                String[] arrAreasTom = myAreasTom.split(",");
 
+                List<String> areasListTom = Arrays.asList(arrAreasTom);
+                if (areasListTom.contains(selectedArea)){
+                    //System.out.println(t);
+                    tomText.append(t + "h00 \n\r");
+                }
+
+            }
             
         }
-
+    }
 
 }
 }

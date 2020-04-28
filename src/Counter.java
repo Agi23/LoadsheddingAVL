@@ -97,7 +97,8 @@ class Counter{
      */
     public String toStringInsert(){
         
-        String out ="Array insert counter: " + Integer.toString(ArrayInsert) + System.lineSeparator() + "BST Insert counter: " + Integer.toString(BSTInsert) + System.lineSeparator()+ "AVL Insert counter: " + Integer.toString(AVLInsert);
+        //String out ="Array insert counter: " + Integer.toString(ArrayInsert) + System.lineSeparator() + "BST Insert counter: " + Integer.toString(BSTInsert) + System.lineSeparator()+ "AVL Insert counter: " + Integer.toString(AVLInsert);
+        String out ="," + Integer.toString(ArrayInsert) +  ", " + Integer.toString(BSTInsert) + "," + Integer.toString(AVLInsert);
         resetInsert();
         return out;
     }

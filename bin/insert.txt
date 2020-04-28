@@ -1,0 +1,40 @@
+Array insert counter: 297
+BST Insert counter: 2509
+AVL Insert counter: 2358
+Array insert counter: 594
+BST Insert counter: 6476
+AVL Insert counter: 5279
+Array insert counter: 891
+BST Insert counter: 10252
+AVL Insert counter: 8547
+Array insert counter: 1188
+BST Insert counter: 13861
+AVL Insert counter: 11878
+Array insert counter: 1485
+BST Insert counter: 17927
+AVL Insert counter: 15305
+Array insert counter: 1782
+BST Insert counter: 22576
+AVL Insert counter: 18909
+Array insert counter: 2079
+BST Insert counter: 26491
+AVL Insert counter: 22609
+Array insert counter: 2376
+BST Insert counter: 28034
+AVL Insert counter: 26046
+Array insert counter: 2673
+BST Insert counter: 36049
+AVL Insert counter: 29976
+Array insert counter: 2976
+BST Insert counter: 37959
+AVL Insert counter: 33649
+,297, 2509,2358
+,594, 6476,5279
+,891, 10252,8547
+,1188, 13861,11878
+,1485, 17927,15305
+,1782, 22576,18909
+,2079, 26491,22609
+,2376, 28034,26046
+,2673, 36049,29976
+,2976, 37959,33649

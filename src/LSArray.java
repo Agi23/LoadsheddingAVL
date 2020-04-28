@@ -138,12 +138,9 @@ public class LSArray {
             fin = new BufferedReader(new InputStreamReader(new FileInputStream(pathToFile)));
             do {
                 line = fin.readLine();
-                //System.out.println(k);
                 
-
-                // System.out.println(line);
-                if (line == null) // Checks if you reached end of file
-                    break; // Exits the loop if end of file reached
+                if (line == null) 
+                    break; 
                 else{
                     opCounterInsert++;
                     arrInfoItems[k] = new LSInfoItem(line);

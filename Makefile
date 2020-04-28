@@ -28,7 +28,6 @@ ClASSES:LSInfoItem.class \
 	LSManager.class \
 	AVLTree.class \
 	LSAVLApp.class \
-	genStage8.class \
 	LSUser.class \
 	GUI.class
 
